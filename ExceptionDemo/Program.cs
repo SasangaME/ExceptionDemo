@@ -4,7 +4,9 @@ using ExceptionDemo.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddTransient<ExceptionHandlingMiddleware>();
+//builder.Services.AddTransient<ExceptionHandlingMiddleware>();
+builder.Services.AddExceptionHandler<ExceptionHandler>();
+
 
 builder.Services.AddConfigServices();
 
@@ -24,7 +26,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseMiddleware<ExceptionHandlingMiddleware>();
+//app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseExceptionHandler(opt => { });
 
 app.UseAuthorization();
 

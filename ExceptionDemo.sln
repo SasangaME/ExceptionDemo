@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionDemo", "ExceptionD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Http", "Http", "{AD2C0AB1-A27A-49EA-A5C2-DA6C0DD07550}"
 	ProjectSection(SolutionItems) = preProject
-		Endpoints.rest = Endpoints.rest
+		Person.rest = Person.rest
 	EndProjectSection
 EndProject
 Global

@@ -1,0 +1,3 @@
+@base_address = http://localhost:8090/api
+
+GET {{base_address}}/person/12
