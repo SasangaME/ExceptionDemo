@@ -1,4 +1,5 @@
-﻿using ExceptionDemo.Models;
+﻿using ExceptionDemo.Exceptions;
+using ExceptionDemo.Models;
 using ExceptionDemo.Repositories;
 
 namespace ExceptionDemo.Services
@@ -26,7 +27,7 @@ namespace ExceptionDemo.Services
 
         public Person FindById(int id)
         {
-            return personRepository.FindById(id) ?? throw new Exception("person not found");
+            return personRepository.FindById(id) ?? throw new NotFoundException($"person not found for id: {id}");
         }
 
         public void Update(int id, Person person)

@@ -5,7 +5,7 @@ namespace ExceptionDemo.Configs
 {
     public static class ServiceResolution
     {
-        public static IServiceCollection AddDependencies(this IServiceCollection services)
+        public static IServiceCollection AddConfigServices(this IServiceCollection services)
         {
             return services
                 .AddSingleton<IPersonRepository, PersonRepository>()
